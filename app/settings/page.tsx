@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function Settings() {
   const buttons = [
-    { name: "Home", href: "/", actual: true },
-    { name: "Settings", href: "/settings", actual: false },
+    { name: "Home", href: "/", actual: false },
+    { name: "Settings", href: "/settings", actual: true },
   ];
 
   return (
