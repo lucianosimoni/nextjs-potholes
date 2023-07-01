@@ -2,9 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useContext } from "react";
+import { ThemeContext } from "./themeProvider";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const buttons = [
     { name: "Home", href: "/" },
@@ -15,7 +18,11 @@ export default function Sidebar() {
   ];
 
   return (
-    <ul className="flex flex-col h-full w-[20%] gap-2 items-center bg-red-800">
+    <ul
+      className={`flex flex-col h-full w-full gap-2 items-center ${
+        theme == "dark" ? "bg-red-800" : "bg-red-200"
+      }`}
+    >
       {buttons.map((button, index) => {
         const isActive = pathname == button.href;
 
