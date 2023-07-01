@@ -6,7 +6,7 @@ import { ThemeContext } from "./themeProvider";
 import { dark, light } from "@/app/lib/mapStyles";
 import { getAllPotholes } from "@/app/lib/potholesUtils";
 import Pothole from "@/app/lib/interfaces/Pothole";
-import MapSVG from "./svg/mapSvg";
+import MapSVG from "./svg/mapSVG";
 
 export default function Map() {
   const [potholes, setPotholes] = useState<Pothole[]>([]);
